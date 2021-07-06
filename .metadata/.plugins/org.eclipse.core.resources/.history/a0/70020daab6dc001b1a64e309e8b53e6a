@@ -1,0 +1,11 @@
+package wt.model;
+
+public class DijkstraModel {
+	
+	public DijkstraModel(String count, String indices, String start) {
+		System.out.println(count);
+		System.out.println(start);
+		System.out.print(indices);
+	}
+
+}

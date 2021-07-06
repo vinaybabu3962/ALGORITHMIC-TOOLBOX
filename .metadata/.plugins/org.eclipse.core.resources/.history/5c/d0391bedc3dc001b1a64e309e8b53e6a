@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<%! int i; %>
+<%! int j; %>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<% String [] out1=(String[])request.getAttribute("out");
+   int[] distance=(int[])request.getAttribute("distance");
+   int start=(int)request.getAttribute("start"); %>
+<% for(i=0;i<out1.length;i++) {%>
+<h3>Distance from <%=start %>to node <%=(i+1) %> is :</h3><h4><%= distance[i]%><%=out1[i] %></h3>
+
+	<br>
+<%} %>
+</body>
+</html>

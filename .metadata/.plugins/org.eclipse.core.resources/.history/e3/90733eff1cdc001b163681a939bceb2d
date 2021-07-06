@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>GREEDY KNAPSACK</title>
+</head>
+<body>
+<h1> GREEDY KNAPSACK</h1>
+<br><br>
+<form action="greedy" method="post" >
+Enter no of items<input  type="number" placeholder="Eg.5" name="count" >
+<br><br>
+Enter profits of the items(Sepeated by commas)
+<input type="text" name="profits" >
+Enter weights of the items(Sepeated by commas)
+<input type="text" name="weights" >
+<input type="submit" value="submit" >
+</form>
+</body>
+</html>

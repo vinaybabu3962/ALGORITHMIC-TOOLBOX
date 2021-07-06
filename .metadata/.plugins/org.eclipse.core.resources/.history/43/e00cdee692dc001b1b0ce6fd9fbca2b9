@@ -1,0 +1,9 @@
+package wt.model;
+
+public class MatrixChainModel {
+
+	public MatrixChainModel(String count, String indices) {
+		
+	}
+
+}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="queens" method="post">
+<br><br>
+Enter no of queens:
+<input type="text" name="count" placeholder="Eg.4 or 5" >
+<br><br>
+<input type="submit" value="submit" >
+</form>
+</body>
+</html>

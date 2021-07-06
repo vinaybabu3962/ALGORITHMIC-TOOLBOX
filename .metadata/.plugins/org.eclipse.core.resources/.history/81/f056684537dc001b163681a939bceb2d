@@ -1,0 +1,73 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<%! int i; %>
+<%! int j; %>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>DP KNAPSACK</h2>
+
+<table border="1">
+
+	<%  int  d1=(int)request.getAttribute("final");
+		 int [][] k=(int [][] )request.getAttribute("array");
+	     int [] profits=(int [])request.getAttribute("profits") ; 
+	    int [] weights =(int [])request.getAttribute("weights") ; 
+	    int [] sel =(int [])request.getAttribute("selection") ; %> 
+	    <tr>
+	    <td>ITEM</td>
+	    <td>PROFIT</td>
+	    <td>WEIGHTS</td>
+	    
+	    <% for(i=0;i<k[0].length;i++) { %>
+	    	<td><%=i %></td>
+	    
+	    <%}%>
+	    </tr>
+	    
+	   <% for(i=0;i<k.length;i++) {  %> 
+	   <tr>
+	   	 <% if(i!=0) {%>
+	   	 	<td><%=i %></td>
+	   	 	<td><%=profits[i-1] %></td>
+	   	 	<td><%=weights[i-1] %></td>
+		  <%}%>
+		  <% if(i==0) {%>
+	   	 	<td>-</td>
+	   	 	<td>-</td>
+	   	 	<td>-</td>
+		  <%}%>
+		  
+		  
+		  <% for(j=0;j<k[0].length;j++) {   %> 
+				<td style="width:25px;"><%=k[i][j] %></td>
+			<%}%>
+		</tr>
+	<%}%>
+</table>
+total profit is<br>
+<%=d1  %>
+
+<br><br>
+<h4 style="color:red;"><sup>**</sup>Note:1 value refers that item is selected <br> 0 refers that item is not selected!!!</h4>
+Selection Array:<br><br>
+<table border="1">
+<tr>
+<td>ITEM</td>
+<% for(i=0;i<sel.length;i++)  {%>
+	<td style="width:25px;"><%=(i+1) %></td>
+<%} %>
+</tr>
+<tr>
+<td>SELECTED/NOT</td>
+<% for(i=0;i<sel.length;i++)  {%>
+	<td style="width:25px;"><%=sel[i] %></td>
+<%} %>
+</tr>
+</table>
+</body>
+</html>

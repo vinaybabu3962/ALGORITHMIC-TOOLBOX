@@ -1,0 +1,13 @@
+package wt.model;
+import java.util.*;
+public class GreedyKnapsackModel {
+	public double count,weight;
+	public double [] profits;
+	public double [] weights;
+	
+	public GreedyKnapsackModel(String count, String profits, String weights, String weight) {
+		
+	}
+
+	
+}

@@ -1,0 +1,7 @@
+<html>
+    <head><title>IFrames</title></head>
+    <body>
+        <iframe  width="100%" height="80"src="header.html" title="Main"></iframe>
+		<iframe  width="100%" height="315"src="KnapSackDP.html" title="Main"></iframe>
+    </body>
+</html>

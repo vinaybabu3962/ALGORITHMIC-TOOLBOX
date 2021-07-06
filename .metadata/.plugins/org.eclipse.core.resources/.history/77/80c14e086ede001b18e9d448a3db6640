@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+	*{
+		margin: 0px;
+		padding:0px;
+	}
+	.nav-item{
+	margin-right:15px;
+	}
+    .abcd{
+    background-image: linear-gradient(to right, #6db9ef, #7ce08a);
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+    <nav class="navbar navbar-expand-md navbar-light bg-light abcd">
+        <a href="index.html" class="navbar-brand">ALGORITHMIC TOOL BOX</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                
+                
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">KNAPSACK</a>
+                    <div class="dropdown-menu">
+                    	<a href="GreedyKnapsack.html" class="dropdown-item">Greedy Knapsack</a>
+  						<a href="KnapSackDP.html" class="dropdown-item">Knapsack using DP</a>
+                
+                    </div>
+                </li>
+                <li class="nav-item">
+                  <a href="MatrixChainMultiplication.html" class="nav-link">Matrix chain multiplication</a>
+                    
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Shortest path</a>
+                    <div class="dropdown-menu">
+                     	<a href="Dijkstras.html" class="dropdown-item">Dijkstras shortest path</a>
+  						<a href="BellmanFord.html" class="dropdown-item">Bellman Ford Algorithm</a>
+                
+                    </div>
+                </li>
+                 <li class="nav-item">
+                 
+                  <a href="FloydWarshall.html" class="nav-link">All pairs shortest path</a> 
+                </li>
+                <li class="nav-item">
+                 
+                  <a href="NQueens.html" class="nav-link">N Queens </a> 
+                </li>
+                <li class="nav-item">
+                 
+                  <a href="Tsp.html" class="nav-link">TSP</a> 
+                </li>
+            </ul>
+            
+        </div>
+    </nav>
+</div>
+<h3>MATRIX CHAIN MULTIPLICATION!!</h3>
+<form action="matmul" method="post" >
+Enter no of matrices<br><br><input  type="number" placeholder="Eg.5" name="count" >
+<br><br>
+Enter indices array(sepated by commas)<br><br>
+<input type="text" name="indices" ><br><br>
+
+<br><br>
+<input type="submit" value="submit" ><br><br>
+</form>
+</body>
+</html>

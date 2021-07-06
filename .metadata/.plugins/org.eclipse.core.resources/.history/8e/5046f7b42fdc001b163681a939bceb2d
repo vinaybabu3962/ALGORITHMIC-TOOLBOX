@@ -1,0 +1,9 @@
+package wt.model;
+
+public class KnapsackDPModel {
+
+	public KnapsackDPModel(String count, String profits, String weights, String weight) {
+		
+	}
+
+}

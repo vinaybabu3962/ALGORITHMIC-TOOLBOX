@@ -1,0 +1,101 @@
+package wt.model;
+import java.util.*;
+public class GreedyKnapsackModel {
+	public int capacity;
+	public int n;
+	public int  [] val;
+	public int [] wt;
+	public double [] sel;
+	public double totalValue = 0d;
+	static class ItemValue {
+		Double cost;
+		double wt, val, ind;
+		public ItemValue(int wt, int val, int ind)
+		{
+
+			this.wt = wt;
+			this.val = val;
+			this.ind = ind;
+			cost = new Double((double)val / (double)wt);
+		}
+	}
+	public GreedyKnapsackModel(String count, String profits, String weights, String weight) {
+		this.n=Integer.parseInt(count);
+		StringTokenizer s1=new StringTokenizer(profits,",");
+		StringTokenizer s2=new StringTokenizer(weights,",");
+		this.capacity=Integer.parseInt(weight);
+		int i=0;
+		this.wt=new int[this.n];
+		this.val=new int[this.n];
+		while (s1.hasMoreTokens()) {
+			this.val[i]=Integer.parseInt(s1.nextToken());
+			this.wt[i]=Integer.parseInt(s2.nextToken());
+		}
+		for( i=0;i<this.n;i++){ System.out.print(this.val[i]+" ");
+
+		} System.out.println();
+
+		for( i=0;i<this.n;i++){ System.out.print(this.wt[i]+" ");
+
+		} System.out.println();
+		ItemValue[] iVal = new ItemValue[this.n];
+		this.sel=new double[this.n];
+		for (i = 0; i <this.n; i++) {
+			iVal[i] = new ItemValue(this.wt[i], this.val[i], i);
+			this.sel[i]=0d;
+		}
+
+		// sorting items by value;
+		Arrays.sort(iVal, new Comparator<ItemValue>() {
+		@Override
+		public int compare(ItemValue o1, ItemValue o2)
+		{
+		return o2.cost.compareTo(o1.cost);
+		}
+		});
+
+		
+
+		for (ItemValue it : iVal) {
+
+		int curWt = (int)it.wt;
+		int curVal = (int)it.val;
+
+		if (this.capacity - curWt >= 0) {
+		// this weight can be picked while
+		this.capacity = this.capacity - curWt;
+		this.totalValue += curVal;
+		this.sel[(int)it.ind]=(double)1d;
+
+		}
+		else {
+		// item cant be picked whole
+		double fraction
+		= ((double)this.capacity / (double)curWt);
+		this.sel[(int)it.ind]=(double)fraction;
+		this.totalValue += (curVal * fraction);
+		this.capacity= (int)(this.capacity - (curWt * fraction));
+
+		break;
+		}
+		for( i=0;i<this.n;i++){ System.out.print(this.sel[i]+" " );
+		 
+		  } System.out.println();
+		 
+		}
+
+		
+		/*
+		 * for( i=0;i<this.n;i++){ System.out.print(this.sel[i]+" " );
+		 * 
+		 * } System.out.println();
+		 */
+
+
+		 System.out.println("Maximum value we can obtain = " + this.totalValue);
+		
+		
+	}
+
+	
+}

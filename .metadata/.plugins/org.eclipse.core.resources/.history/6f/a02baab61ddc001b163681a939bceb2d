@@ -1,0 +1,10 @@
+package wt.model;
+
+public class GreedyKnapsackModel {
+
+	public GreedyKnapsackModel(String count, String profits, String weights, String weight) {
+		
+	}
+
+	
+}

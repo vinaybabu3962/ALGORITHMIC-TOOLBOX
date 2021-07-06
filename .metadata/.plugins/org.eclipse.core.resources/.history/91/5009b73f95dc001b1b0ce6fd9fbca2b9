@@ -1,0 +1,81 @@
+package wt.model;
+
+import java.util.StringTokenizer;
+
+public class MatrixChainModel {
+	public int n;
+	public int[] arr;
+	public char name;
+	public String out="";
+	public int result;
+	public void printParenthesis(int i, int j,
+            int n, int[][] bracket)
+	{
+			// If only one matrix left in current segment
+			if (i == j)
+			{
+			this.out+=(this.name++);
+			return;
+			}
+			// System.out.print("(");
+			this.out+="(";
+			
+			
+			this.printParenthesis(i, bracket[i][j], n, bracket);
+			this.printParenthesis(bracket[i][j] + 1, j, n, bracket);
+			//System.out.print(")");
+			this.out+=")";
+	}
+	void matrixChainOrder(int p[], int n)
+	  {
+	    int[][] m = new int[n][n];
+	    int[][] bracket = new int[n][n];
+
+	    for (int i = 1; i < n; i++)
+	      m[i][i] = 0;
+
+	    for (int L = 2; L < n; L++)
+	    {
+	      for (int i = 1; i < n - L + 1; i++)
+	      {
+	        int j = i + L - 1;
+	        m[i][j] = Integer.MAX_VALUE;
+	        for (int k = i; k <= j - 1; k++)
+	        {
+	          int q = m[i][k] + m[k + 1][j] + p[i - 1] * p[k] * p[j];
+	          if (q < m[i][j])
+	          {
+	            m[i][j] = q;
+	            bracket[i][j] = k;
+	          }
+	        }
+			
+	      }
+	    }
+
+	    this.name = 'A';
+	    System.out.print("Optimal Parenthesization is : ");
+	    this.printParenthesis(1, n - 1, n, bracket);
+		this.result= m[1][n - 1];
+	    System.out.print("\nOptimal Cost is : " + m[1][n - 1]);
+	  }
+	
+	public MatrixChainModel(String count, String indices) {
+		this.n=Integer.parseInt(count);
+		this.arr=new int[this.n];
+		StringTokenizer s1=new StringTokenizer(indices,",");
+		int i=0;
+		while(s1.hasMoreTokens()) {
+			this.arr[i]=Integer.parseInt(s1.nextToken());
+			i++;
+		}
+		MatrixChainModel a=new MatrixChainModel();
+	    a.matrixChainOrder(this.arr,this.n);
+	    System.out.println("para:"+out);
+		
+	}
+	public MatrixChainModel() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

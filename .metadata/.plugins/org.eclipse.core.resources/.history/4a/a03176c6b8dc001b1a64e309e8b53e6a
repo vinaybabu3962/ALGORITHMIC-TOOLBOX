@@ -1,0 +1,43 @@
+package wt.model;
+
+import java.util.StringTokenizer;
+
+public class DijkstraModel {
+	public int n;
+	public int cost[][];
+	public int distance[];
+	public int visited[];
+	public int pred[];
+	public int count;
+	public int start;
+	public String out[];
+	public DijkstraModel(String count, String indices, String start) {
+		System.out.println(count);
+		System.out.println(start);
+		System.out.println(indices);
+		this.n=Integer.parseInt(count);
+		this.start=Integer.parseInt(start);
+		this.cost=new int[this.n][this.n];
+		indices=indices.substring(1, indices.length()-1);
+		System.out.println(indices);
+		StringTokenizer s=new StringTokenizer(indices,",");
+		int i=0;
+		while(s.hasMoreTokens()) {
+			String st=s.nextToken();
+			st=st.substring(1,st.length()-1);
+			StringTokenizer s1=new StringTokenizer(st);
+			int j=0;
+			while(s1.hasMoreTokens()) {
+				int x=Integer.parseInt(s1.nextToken());
+				if(x==0) 
+					this.cost[i][j]=1000009;
+				else
+					this.cost[i][j]=x;
+				j++;
+			}
+			i++;
+		}
+		
+	}
+
+}

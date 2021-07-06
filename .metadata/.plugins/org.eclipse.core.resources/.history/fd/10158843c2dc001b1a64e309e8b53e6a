@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<%! int i; %>
+<%! int j; %>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<% String [] out1=(String[])request.getAttribute("out"); %>
+<% for(String  s:out1) {%>
+	<% out.println(s); %>
+	<br><br>
+<%} %>
+</body>
+</html>

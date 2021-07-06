@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<%! int i; %>
+<%! int j; %>
+<head>
+<meta charset="ISO-8859-1">
+<title>N QUEENS</title>
+</head>
+<body>
+<% boolean b=(boolean)request.getAttribute("out");
+ int [][] board=(int [][] )request.getAttribute("matrix"); %>
+ <% if(b==false) { %>
+ 	<h2 style="color:red;">Solution does not exist!!</h2>
+ <% } else { %>
+ 	<table border="1">
+ 		<% for(i=0;i<board.length;i++) { %>
+ 			<tr>
+ 			<% for(j=0;j<board[0].length;j++)  {%>
+ 				<% if(board[i][j]==1) { %>
+ 					<td style="color:red;width:30px;">Q</td>
+ 				<%}else{ %>
+ 					<td style="width:30px;">-</td>
+ 				<%} %>
+ 			<%} %>
+ 			</tr>
+ 		<%} %>
+ 	</table>
+ <%} %>
+
+</body>
+</html>

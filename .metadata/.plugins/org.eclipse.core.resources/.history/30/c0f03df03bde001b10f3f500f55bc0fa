@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<%! int i; %>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>TSP OUTPUT</title>
+</head>
+<body>
+<% int s=(int)request.getAttribute("cost");
+ int[] cost=(int[])request.getAttribute("finalpath") ;%>
+ Minimmum cost to go  from source to destination is:
+ <br><br>
+ <%=s %>
+ <br><br>
+ Path to go from source to destination is:
+ <% for(i=0 ; i<cost.length;i++){ %>
+ 	<% if(i==cost.length-1)  { %>
+ 		<span><%=cost[i] %> </span>
+ 	<% } else {%>
+ 		<span><%=cost[i]  %> --> </span>
+ 	<%} %>
+ <%} %>
+</body>
+</html>

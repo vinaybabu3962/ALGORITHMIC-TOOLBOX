@@ -1,0 +1,9 @@
+package wt.model;
+
+public class NQueensModel {
+
+	public NQueensModel(String count) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

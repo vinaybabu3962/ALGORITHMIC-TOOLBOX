@@ -1,0 +1,10 @@
+package wt.model;
+
+public class FloydWarshallModel {
+	public int n;
+	public int count;
+	public int cost[][];
+	public FloydWarshallModel(String count,String indices) {
+		
+	}
+}

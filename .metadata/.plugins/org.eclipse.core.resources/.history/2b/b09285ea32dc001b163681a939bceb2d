@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<%! int i; %>
+<%! int j; %>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>DP KNAPSACK</h2>
+
+<table border="1">
+
+	<%  int  d1=(int)request.getAttribute("final");
+		 int [][] k=(int [][] )request.getAttribute("array");
+	     int [] profits=(int [])request.getAttribute("profits") ; 
+	    int [] weights =(int [])request.getAttribute("weights") ; 
+	   for(i=0;i<=k.length;i++) {  %> 
+	   <tr> 
+		  <% for(j=0;j<=k[0].length;j++) {   %> 
+				<td><%=k[i][j] %></td>
+			<%}%>
+		</tr>
+	<%}%>
+</table>
+total profit is<br>
+<%=d1  %>
+</body>
+</html>

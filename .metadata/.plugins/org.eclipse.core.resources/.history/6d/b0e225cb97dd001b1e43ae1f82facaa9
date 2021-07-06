@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<%! int i; %>
+<%! int j; %>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<% String s=(String)request.getAttribute("out");
+	int [] cost=(int [] )request.getAttribute("cost") ;%>
+
+INFORMATION ABOUT NEGATIVE CYCLE:<%=s %>
+<br><br>
+COST DETAILS:
+<br><br>
+<% for(i=0;i<cost.length;i++) { %>
+	
+	<h2>Vertex <%=i %> -> cost = <%=cost[i] %> </h2>
+<%} %>
+</body>
+</html>

@@ -1,0 +1,13 @@
+
+<!DOCTYPE html>
+<html>    
+    <head>
+        <title>frameset attribute</title>
+    </head>
+         
+    <frameset rows = "15%,75%">
+        <frame name = "top" src = "header.html" scrolling=no />
+        <frame name = "main" src = "GreedyKnapsack.html" scrolling=no />
+        
+    </frameset>
+</html>

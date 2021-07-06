@@ -1,0 +1,10 @@
+package wt.model;
+
+public class BellmanFordModel {
+	public int count;
+	public int start;
+	public int cost[][];
+	public BellmanFordModel(String count, String indices, String start) {
+		
+	}
+}

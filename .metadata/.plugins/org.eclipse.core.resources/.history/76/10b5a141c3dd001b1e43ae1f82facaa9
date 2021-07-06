@@ -1,0 +1,9 @@
+package wt.model;
+
+public class TspModel {
+	public int n;
+	public TspModel(String count,String indices) {
+		this.n=Integer.parseInt(count);
+		
+	}
+}

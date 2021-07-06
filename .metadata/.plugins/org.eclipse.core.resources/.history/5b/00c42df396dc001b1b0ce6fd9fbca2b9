@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<% int val=(int)request.getAttribute("multiplications");
+String seq=(String)request.getAttribute("seq") ;%>
+
+<br>
+No of multiplications
+<br>
+<%=val %>
+<br><br>Sequence of multiplications is
+<br><br>
+<%=seq %>
+</body>
+</html>

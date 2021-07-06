@@ -1,0 +1,38 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<%! int i; %>
+<%! int j; %>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<% int val=(int)request.getAttribute("multiplications");
+String seq=(String)request.getAttribute("seq") ;%>
+
+<br>
+No of multiplications
+<br>
+<%=val %>
+<hr>
+<br><br>Sequence of multiplications is
+<br><br>
+<%=seq %>
+<hr>
+<table border="1">
+<% int[][] array=(int [][])request.getAttribute("array"); %>
+ <% for(i=0;i<array.length;i++) { %>
+ 	<tr>
+ 	<% for(j=0;j<array[0].length;j++ ){ %>
+ 			<td style="width:30px;"><%=array[i][j] %></td>
+ 			
+ 	<%} %>
+ 	</tr>
+ <%} %>
+ 
+
+</table>
+</body>
+</html>

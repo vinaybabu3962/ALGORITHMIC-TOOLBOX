@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>MATRIX CHAIN MULTIPLICATION!!</h3>
+<form action="matmul" method="post" >
+Enter no of matrices<br><br><input  type="number" placeholder="Eg.5" name="count" >
+<br><br>
+Enter indices array(sepated by commas)<br><br>
+<input type="text" name="indices" ><br><br>
+
+<br><br>
+<input type="submit" value="submit" ><br><br>
+</form>
+</body>
+</html>

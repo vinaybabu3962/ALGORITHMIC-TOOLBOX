@@ -1,0 +1,13 @@
+
+<!DOCTYPE html>
+<html>    
+    <head>
+        <title>frameset attribute</title>
+    </head>
+         
+    <frameset rows = "10%,90%">
+        <frame name = "top" src = "header.html" />
+        <frame name = "main" src = "gradient3.png" />
+        
+    </frameset>
+</html>

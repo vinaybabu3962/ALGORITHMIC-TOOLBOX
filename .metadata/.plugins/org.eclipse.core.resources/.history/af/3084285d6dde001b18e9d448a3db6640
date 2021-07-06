@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>GREEDY KNAPSACK</title>
+</head>
+<body>
+<h1> GREEDY KNAPSACK</h1>
+<br><br>
+<form action="dpknapsack" method="post" >
+Enter no of items<br><br><input  type="number" placeholder="Eg.5" name="count" >
+<br><br>
+Enter profits of the items(Sepeated by commas)<br><br>
+<input type="text" name="profits" ><br><br>
+Enter weights of the items(Sepeated by commas)<br><br>
+<input type="text" name="weights" >
+<br><br>
+Enter weights of the knapsack<br><br>
+<input type="text" name="weight" >
+<br><br>
+<input type="submit" value="submit" ><br><br>
+</form>
+</body>
+</html>

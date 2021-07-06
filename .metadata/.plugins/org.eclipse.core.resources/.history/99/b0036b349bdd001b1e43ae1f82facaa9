@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<%! int i; %>
+<%! int j; %>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+CALUCLATING DISTANCES FROM ONE VERTEX TO ANOTHER VERTEX!!
+<br><br>
+<% int [][] graph=(int[][])request.getAttribute("matrix"); %>
+<% for(i=0;i<graph.length;i++) { %>
+	<%for(j=0;j<graph[0].length;j++){ %>
+		<h3>Distance from vertex <%=i %> to vertex <%=j %> is <%=graph[i][j] %></h3>
+	<%} %>
+<%} %>
+</body>
+</html>

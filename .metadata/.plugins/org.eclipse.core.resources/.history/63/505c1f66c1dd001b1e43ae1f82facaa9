@@ -1,0 +1,8 @@
+package wt.model;
+
+public class TspModel {
+	
+	public TspModel(String count,String indices) {
+		
+	}
+}

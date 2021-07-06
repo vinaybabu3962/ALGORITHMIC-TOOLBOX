@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Dikstras</title>
+</head>
+<body>
+<form action="dijkstra" method="POST">
+<br><br>Enter no of nodes:
+<br><br>
+<input type="number" name="count" placeholder="Eg.5"  >
+<br><br>
+Enter adjacency matrix as follows
+<br><br>
+<textarea id="w3review" name="matrix" placeholder="Eg:[[1,2,3,4,5]+"\n"+[6,7,8,9,10]]"rows="10" cols="50"></textarea>
+<br><br>
+Enter starting node:
+<br><br>
+<input type="number" placeholder="Eg:Enter 0 for node 1,1 for node 2" name="start" >
+ <input type="submit" value="Submit" >
+</form>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+package wt.model;
+
+import java.util.StringTokenizer;
+
+public class MatrixChainModel {
+	public int n;
+	public int[] arr;
+	public char name;
+	public String out;
+	public int result;
+	public void printParenthesis(int i, int j,
+            int n, int[][] bracket)
+	{
+			// If only one matrix left in current segment
+			if (i == j)
+			{
+			out+=(name++);
+			return;
+			}
+			// System.out.print("(");
+			out+="(";
+			
+			
+			printParenthesis(i, bracket[i][j], n, bracket);
+			printParenthesis(bracket[i][j] + 1, j, n, bracket);
+			//System.out.print(")");
+			out+=")";
+	}
+	
+	public MatrixChainModel(String count, String indices) {
+		this.n=Integer.parseInt(count);
+		this.arr=new int[this.n];
+		StringTokenizer s1=new StringTokenizer(indices,",");
+		int i=0;
+		while(s1.hasMoreTokens()) {
+			this.arr[i]=Integer.parseInt(s1.nextToken());
+			i++;
+		}
+		
+	}
+
+}
